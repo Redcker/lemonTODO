@@ -44,6 +44,7 @@
 			</view>
 		</u-modal>
 		<u-toast ref="uToast"></u-toast>
+		<view class="text-center tips-text f-12" @click="update">{{updateStr}}</view>
 	</view>
 </template>
 
@@ -71,12 +72,15 @@
 				btnLoading: false,
 				menuShow: false,
 				currentEvent: {},
-				getFocusTime: getFocusTime
+				getFocusTime: getFocusTime,
+				updateStr: '',
+				isUpdate: false
 			}
 		},
 		async onLoad() {
 			this.eventList = await selectEvent()
 			this.loading = false
+			this.getUpdate()
 		},
 		async onShow() {
 			this.eventList = await selectEvent()
@@ -118,6 +122,26 @@
 					message: "添加成功",
 					position: 'top'
 				})
+			},
+			getUpdate() {
+				this.updateStr = '当前版本：' + plus.runtime.version
+				uni.request({
+					url: 'https://api.github.com/repos/Redcker/lemonTODO/releases/latest',
+					success: (res) => {
+						let currentVersion = res.data['tag_name']
+						if (currentVersion > plus.runtime.version) {
+							this.isUpdate = true
+							this.updateStr = '有新版本啦，点我更新！'
+						}
+					}
+				})
+			},
+			update() {
+				if (this.isUpdate) {
+					plus.runtime.openURL('https://jq.qq.com/?_wv=1027&k=7wqdsB20', function(res) {
+						console.log(res);
+					});
+				}
 			}
 		}
 	}

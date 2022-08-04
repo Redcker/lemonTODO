@@ -28,6 +28,7 @@
 		background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 
 	}
+
 	.f-14 {
 		font-size: 14px !important;
 	}
@@ -41,6 +42,10 @@
 	}
 
 	.f-11 {
+		font-size: 11px !important;
+	}
+
+	.f-12 {
 		font-size: 11px !important;
 	}
 
