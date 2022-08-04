@@ -24,7 +24,7 @@
 - [Vue2](https://v2.vuejs.org/) - 熟悉 Vue 基础语法
 - [TypeScript](https://www.javascript.com/) - 熟悉`JavaScript`基本语法
 - [Es6+](http://es6.ruanyifeng.com/) - 熟悉 es6 基本语法
-- [uniapp](https://uni-app.dcloud.net.cn/) - 熟悉uniapp基本用法
+- [uni-app](https://uni-app.dcloud.net.cn/) - 熟悉uni-app基本用法
 - [uView UI](https://www.uviewui.com/) - 熟悉ui的基本使用
 - [uCharts](https://www.ucharts.cn/) - 熟悉图表库的基本使用
 - [Hbuilder X](https://www.dcloud.io/hbuilderx.html) - 开发IDE
