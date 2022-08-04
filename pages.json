@@ -1,0 +1,64 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "待办列表",
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/timer/timer",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/statistics/statistics",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none"
+				}
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#1296db",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		"iconWidth": "24px",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/index.png",
+				"selectedIconPath": "static/tabbar/index-selected.png",
+				"text": "待办"
+			},
+			{
+				"pagePath": "pages/statistics/statistics",
+				"iconPath": "static/tabbar/statistics.png",
+				"selectedIconPath": "static/tabbar/statistics-selected.png",
+				"text": "统计"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "柠檬TODO",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#ffffff"
+	},
+	"uniIdRouter": {}
+}

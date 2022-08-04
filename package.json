@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@qiun/ucharts": "^2.4.3-20220505",
+    "html2canvas": "^1.4.1",
+    "uview-ui": "^2.0.33"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "sass-loader": "^13.0.2"
+  }
+}
